@@ -8,16 +8,13 @@ def apple_picker_with_select(fruit_list)
 end
 
 def apple_picker_with_collect(fruit_list)
-  new_list = []
+  
   # fruit_list will look something like: ["apple", "banana", "apple"]
   # you want to return an array that just the apples, just like the 
   # challenge above
   #binding.pry
-    fruit_list.collect! do |n|
-      if n == "apple"
-        new_list << n
-      end
-    end
-    new_list
+    result_of_collecting = fruit_list.collect{|x| x if x == "apple"}
+    
+    result_of_collecting.compact
 end
 
